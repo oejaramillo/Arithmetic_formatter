@@ -1,4 +1,4 @@
-def arthmetic_arranger(problems):
+def arthmetic_arranger(problems, results=False):
     if len(problems) > 5:
         return print('Error: Too many problems.')
 
@@ -148,34 +148,60 @@ def arthmetic_arranger(problems):
         
 
         ##Finalmente con las líneas de salida, definimos arranged_problems como el print
-        if len(problems) == 1:
-            arranged_problems = print(line1[0][0],'\n',
-                            line2[0][0],' ', line2[0][1],'\n',
-                            line3[0][0],'\n',
-                            line4[0][0], sep='')
-        else:
-            if len(problems) == 2:
-                arranged_problems = print(line1[0][0], '    ', line1[0][1],'\n',
-                            line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3],'\n',
-                            line3[0][0], '    ', line3[0][1],'\n',
-                            line4[0][0], '    ', line4[0][1], sep='')
+        if results == True:
+            if len(problems) == 1:
+                arranged_problems = print(line1[0][0],'\n',
+                                line2[0][0],' ', line2[0][1],'\n',
+                                line3[0][0],'\n',
+                                line4[0][0], sep='')
             else:
-                if len(problems) == 3:
-                    arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2],'\n',
-                            line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5],'\n',
-                            line3[0][0], '    ', line3[0][1], '    ', line3[0][2],'\n',
-                            line4[0][0], '    ', line4[0][1], '    ', line4[0][2], sep='')
+                if len(problems) == 2:
+                    arranged_problems = print(line1[0][0], '    ', line1[0][1],'\n',
+                                line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3],'\n',
+                                line3[0][0], '    ', line3[0][1],'\n',
+                                line4[0][0], '    ', line4[0][1], sep='')
                 else:
-                    if len(problems) == 4:
-                        arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2], '    ', line1[0][3],'\n',
-                            line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5], '    ', line2[0][6], ' ', line2[0][7],'\n',
-                            line3[0][0], '    ', line3[0][1], '    ', line3[0][2], '    ', line3[0][3],'\n',
-                            line4[0][0], '    ', line4[0][1], '    ', line4[0][2], '    ', line4[0][3], sep='')
+                    if len(problems) == 3:
+                        arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2],'\n',
+                                line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5],'\n',
+                                line3[0][0], '    ', line3[0][1], '    ', line3[0][2],'\n',
+                                line4[0][0], '    ', line4[0][1], '    ', line4[0][2], sep='')
                     else:
-                        arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2], '    ', line1[0][3], '    ', line1[0][4],'\n',
-                            line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5], '    ', line2[0][6], ' ', line2[0][7], '    ', line2[0][8], ' ', line2[0][9],'\n',
-                            line3[0][0], '    ', line3[0][1], '    ', line3[0][2], '    ', line3[0][3], '    ', line3[0][4],'\n',
-                            line4[0][0], '    ', line4[0][1], '    ', line4[0][2], '    ', line4[0][3], '    ', line4[0][4], sep='')
+                        if len(problems) == 4:
+                            arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2], '    ', line1[0][3],'\n',
+                                line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5], '    ', line2[0][6], ' ', line2[0][7],'\n',
+                                line3[0][0], '    ', line3[0][1], '    ', line3[0][2], '    ', line3[0][3],'\n',
+                                line4[0][0], '    ', line4[0][1], '    ', line4[0][2], '    ', line4[0][3], sep='')
+                        else:
+                            arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2], '    ', line1[0][3], '    ', line1[0][4],'\n',
+                                line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5], '    ', line2[0][6], ' ', line2[0][7], '    ', line2[0][8], ' ', line2[0][9],'\n',
+                                line3[0][0], '    ', line3[0][1], '    ', line3[0][2], '    ', line3[0][3], '    ', line3[0][4],'\n',
+                                line4[0][0], '    ', line4[0][1], '    ', line4[0][2], '    ', line4[0][3], '    ', line4[0][4], sep='')
+        else:
+            if len(problems) == 1:
+                arranged_problems = print(line1[0][0],'\n',
+                                line2[0][0],' ', line2[0][1],'\n',
+                                line3[0][0], sep='')
+            else:
+                if len(problems) == 2:
+                    arranged_problems = print(line1[0][0], '    ', line1[0][1],'\n',
+                                line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3],'\n',
+                                line3[0][0], '    ', line3[0][1], sep='')
+                else:
+                    if len(problems) == 3:
+                        arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2],'\n',
+                                line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5],'\n',
+                                line3[0][0], '    ', line3[0][1], '    ', line3[0][2], sep='')
+                    else:
+                        if len(problems) == 4:
+                            arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2], '    ', line1[0][3],'\n',
+                                line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5], '    ', line2[0][6], ' ', line2[0][7],'\n',
+                                line3[0][0], '    ', line3[0][1], '    ', line3[0][2], '    ', line3[0][3], sep='')
+                        else:
+                            arranged_problems = print(line1[0][0], '    ', line1[0][1], '    ', line1[0][2], '    ', line1[0][3], '    ', line1[0][4],'\n',
+                                line2[0][0],' ', line2[0][1], '    ', line2[0][2], ' ', line2[0][3], '    ', line2[0][4], ' ', line2[0][5], '    ', line2[0][6], ' ', line2[0][7], '    ', line2[0][8], ' ', line2[0][9],'\n',
+                                line3[0][0], '    ', line3[0][1], '    ', line3[0][2], '    ', line3[0][3], '    ', line3[0][4], sep='')
+
 
     
     ##La salida sería
@@ -183,4 +209,4 @@ def arthmetic_arranger(problems):
 
     
 
-arthmetic_arranger(['3801 + 2456'])
+arthmetic_arranger(['3801 + 2456', '78 - 123', '745 + 123'])
